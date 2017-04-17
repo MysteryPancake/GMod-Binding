@@ -26,15 +26,15 @@ function bind.Get( key ) return bind.Bindings[ key ] end
 
 local FirstPressed = {}
 
-hook.Add( "Tick", "BadBinding", function()
+hook.Add( "Tick", "CallBindings", function()
 	for key, tbl in pairs( bind.Bindings ) do
-	    if input.IsKeyDown( key ) then
-	    	for _, func in pairs( tbl ) do
-	    		func( FirstPressed[ key ] )
-	    	end
-	    	FirstPressed[ key ] = false
-	    else
-	    	FirstPressed[ key ] = true
-	    end
+		if input.IsKeyDown( key ) then
+			for _, func in pairs( tbl ) do
+				func( FirstPressed[ key ] )
+			end
+			FirstPressed[ key ] = false
+		else
+			FirstPressed[ key ] = true
+		end
 	end
 end )
