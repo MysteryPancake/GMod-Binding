@@ -10,6 +10,12 @@ bind.Add( KEY_R, "SomeNameHere", function( FirstPressed )
     end
 end )
 ```
+Adding a binding run while the key is being pressed:
+```
+bind.Add( KEY_W, "AnotherNameHere", function( FirstPressed )
+    print( "You are walking forwards." )
+end )
+```
 Removing a binding:
 ```
 bind.Remove( KEY_R, "SomeNameHere" )
