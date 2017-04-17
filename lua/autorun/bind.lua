@@ -1,4 +1,4 @@
-local bind = { Bindings = {} }
+bind = { Bindings = {} }
 
 function bind.Add( key, name, func )
 
