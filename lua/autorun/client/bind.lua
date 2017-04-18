@@ -8,6 +8,8 @@ module( "bind" )
 
 local Bindings = {}
 
+function GetTable() return Bindings end
+
 function Add( key, name, func )
 
 	if !isfunction( func ) then return end
