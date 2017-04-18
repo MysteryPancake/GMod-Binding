@@ -22,17 +22,15 @@ function bind.Remove( key, name )
 
 end
 
-function bind.Get( key ) return bind.Bindings[ key ] end
-
 local FirstPressed = {}
 
 hook.Add( "Tick", "CallBindings", function()
 	for key, tbl in pairs( bind.Bindings ) do
 		if input.IsButtonDown( key ) then
-			for _, func in pairs( tbl ) do
-				func( FirstPressed[ key ] )
+			if FirstPressed[ key ] then
+				for _, func in pairs( tbl ) do func() end
+				FirstPressed[ key ] = false
 			end
-			FirstPressed[ key ] = false
 		else
 			FirstPressed[ key ] = true
 		end
