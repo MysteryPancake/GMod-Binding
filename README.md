@@ -18,3 +18,7 @@ Removing a binding:
 ```
 bind.Remove( KEY_R, "UniqueNameHere" )
 ```
+Printing all the bindings:
+```
+PrintTable( bind.GetTable() )
+```
