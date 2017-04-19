@@ -48,13 +48,9 @@ local FirstPressed = {}
 
 hook.Add( "Tick", "CallBindings", function()
 	for btn, tbl in pairs( Bindings ) do
-		if input.IsButtonDown( btn ) then
-			if FirstPressed[ btn ] then
-				for _, func in pairs( tbl ) do func() end
-				FirstPressed[ btn ] = false
-			end
-		else
-			FirstPressed[ btn ] = true
+		if input.IsButtonDown( btn ) and FirstPressed[ btn ] then
+			for _, func in pairs( tbl ) do func() end
 		end
+		FirstPressed[ btn ] = !input.IsButtonDown( btn )
 	end
 end )
