@@ -1,4 +1,4 @@
-# GMod Binding Module
+# Garry's Mod Binding Module
 This is a simple script that lets you create bindings for [keys](https://wiki.garrysmod.com/page/Enums/KEY), as well as [mouse](https://wiki.garrysmod.com/page/Enums/MOUSE) and [controller](https://wiki.garrysmod.com/page/Enums/JOYSTICK) buttons. You can use it in whatever Garry's Mod code you want. Have fun!
 
 ## Example Usage
