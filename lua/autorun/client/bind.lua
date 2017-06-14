@@ -46,7 +46,7 @@ end
 
 local FirstPressed = {}
 
-hook.Add( "Tick", "CallBindings", function()
+hook.Add( "Think", "CallBindings", function()
 	for btn, tbl in pairs( Bindings ) do
 		local cache = input.IsButtonDown( btn )
 		if cache and FirstPressed[ btn ] then
