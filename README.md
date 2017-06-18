@@ -1,24 +1,24 @@
 # Garry's Mod Binding Module
 This is a simple script that lets you create bindings for [keys](https://wiki.garrysmod.com/page/Enums/KEY), as well as [mouse](https://wiki.garrysmod.com/page/Enums/MOUSE) and [controller](https://wiki.garrysmod.com/page/Enums/JOYSTICK) buttons. 
 
-You can use it for whatever you want. Have fun!
+Use it for whatever you want. Have fun!
 
 ## Example Usage
 #### Adding a binding:
 ```
-bind.Add( KEY_R, "UniqueNameHere", function()
+bind.Add( KEY_R, "UNIQUE NAME", function()
     notification.AddLegacy( "This script works!", NOTIFY_GENERIC, 2 )
 end )
 ```
 #### Adding a mouse binding:
 ```
-bind.Add( MOUSE_LEFT, "UniqueNameHere", function()
+bind.Add( MOUSE_LEFT, "UNIQUE NAME", function()
     notification.AddLegacy( "Left clicked!", NOTIFY_GENERIC, 2 )
 end )
 ```
 #### Removing a binding:
 ```
-bind.Remove( KEY_R, "UniqueNameHere" )
+bind.Remove( KEY_R, "UNIQUE NAME" )
 ```
 #### Printing all the bindings:
 ```
@@ -31,9 +31,9 @@ For people who don't want an entire module just to bind a single key.
 local FirstPressed = false
 
 hook.Add( "Think", "CallBinding", function()
-	local cache = input.IsButtonDown( btn ) -- Put a button here
+	local cache = input.IsButtonDown( SOME BUTTON )
 	if cache and FirstPressed then
-	    -- Run something here
+	    SOME CODE
 	end
 	FirstPressed = !cache
 end )
