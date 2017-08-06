@@ -4,23 +4,23 @@ This is a simple script that lets you create bindings for [keys](https://wiki.ga
 Use it for whatever you want, and have fun!
 
 ## Example Usage
-#### Adding a binding:
+### Adding a binding:
 ```
 bind.Add( KEY_R, "UNIQUE NAME", function()
     notification.AddLegacy( "This script works!", NOTIFY_GENERIC, 2 )
 end )
 ```
-#### Adding a mouse binding:
+### Adding a mouse binding:
 ```
 bind.Add( MOUSE_LEFT, "UNIQUE NAME", function()
     notification.AddLegacy( "Left clicked!", NOTIFY_GENERIC, 2 )
 end )
 ```
-#### Removing a binding:
+### Removing a binding:
 ```
 bind.Remove( KEY_R, "UNIQUE NAME" )
 ```
-#### Printing all the bindings:
+### Printing all the bindings:
 ```
 PrintTable( bind.GetTable() )
 ```
