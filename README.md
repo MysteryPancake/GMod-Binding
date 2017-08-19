@@ -31,9 +31,9 @@ For people who don't want an entire module just to bind a single key.
 local FirstPressed = false
 
 hook.Add( "Think", "CallBinding", function()
-	local cache = input.IsButtonDown( INSERT_BUTTON_HERE )
+	local cache = input.IsButtonDown( BUTTON_HERE )
 	if cache and FirstPressed then
-	    INSERT_CODE_HERE
+	    CODE_HERE
 	end
 	FirstPressed = !cache
 end )
