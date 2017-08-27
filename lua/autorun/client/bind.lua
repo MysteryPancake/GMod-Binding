@@ -4,7 +4,7 @@ local Bindings = {}
 
 --[[---------------------------------------------------------
     GetTable()
-    Returns a table of all bindings.
+    Returns a table of all the bindings.
 -----------------------------------------------------------]]
 function bind.GetTable() return Bindings end
 
