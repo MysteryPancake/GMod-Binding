@@ -6,19 +6,19 @@ Use it for whatever you want, and have fun!
 ## Example Usage
 ### Adding a binding:
 ```
-bind.Add( KEY_R, "{UNIQUE_NAME}", function()
+bind.Add( KEY_R, "<UNIQUE_NAME>", function()
     notification.AddLegacy( "This script works!", NOTIFY_GENERIC, 2 )
 end )
 ```
 ### Adding a mouse binding:
 ```
-bind.Add( MOUSE_LEFT, "{UNIQUE_NAME}", function()
+bind.Add( MOUSE_LEFT, "<UNIQUE_NAME>", function()
     notification.AddLegacy( "Left clicked!", NOTIFY_GENERIC, 2 )
 end )
 ```
 ### Removing a binding:
 ```
-bind.Remove( KEY_R, "{UNIQUE_NAME}" )
+bind.Remove( KEY_R, "<UNIQUE_NAME>" )
 ```
 ### Printing all the bindings:
 ```
@@ -31,9 +31,9 @@ For people who only want to bind a single key.
 local FirstPressed = false
 
 hook.Add( "Think", "CallBinding", function()
-	local cache = input.IsButtonDown( {BUTTON} )
+	local cache = input.IsButtonDown( <BUTTON> )
 	if cache and FirstPressed then
-	    {CODE}
+	    <CODE>
 	end
 	FirstPressed = !cache
 end )
