@@ -34,7 +34,7 @@ local FirstPressed = false
 hook.Add( "Think", "CallBinding", function()
 	local cache = input.IsButtonDown( <BUTTON> )
 	if cache and FirstPressed then
-	    <CODE>
+		<CODE>
 	end
 	FirstPressed = !cache
 end )
