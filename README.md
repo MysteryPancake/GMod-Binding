@@ -1,6 +1,6 @@
 # Garry's Mod Binding
 This is a simple script that lets you create bindings for [keys](https://wiki.garrysmod.com/page/Enums/KEY), as well as [mouse](https://wiki.garrysmod.com/page/Enums/MOUSE) and [controller](https://wiki.garrysmod.com/page/Enums/JOYSTICK) buttons.  
-It only works client-side, since on server-side you can use [the numpad library](http://wiki.garrysmod.com/page/Category:numpad).
+It only works clientside, since on serverside you can use [the numpad library](http://wiki.garrysmod.com/page/Category:numpad).
 
 Use it for whatever you want, and have fun!
 
