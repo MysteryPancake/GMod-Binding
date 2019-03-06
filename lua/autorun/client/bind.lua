@@ -14,8 +14,8 @@ function bind.GetTable() return Bindings end
 -----------------------------------------------------------]]
 function bind.Add( btn, name, func )
 
-	if !isfunction( func ) then return end
-	if !isnumber( btn ) then return end
+	if not isfunction( func ) then return end
+	if not isnumber( btn ) then return end
 
 	if Bindings[ btn ] == nil then
 		Bindings[ btn ] = {}
@@ -31,8 +31,8 @@ end
 -----------------------------------------------------------]]
 function bind.Remove( btn, name )
 
-	if !isnumber( btn ) then return end
-	if !Bindings[ btn ] then return end
+	if not isnumber( btn ) then return end
+	if not Bindings[ btn ] then return end
 
 	Bindings[ btn ][ name ] = nil
 
@@ -46,6 +46,6 @@ hook.Add( "Think", "CallBindings", function()
 		if cache and FirstPressed[ btn ] then
 			for _, func in pairs( tbl ) do func() end
 		end
-		FirstPressed[ btn ] = !cache
+		FirstPressed[ btn ] = not cache
 	end
 end )
