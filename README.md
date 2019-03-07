@@ -36,6 +36,6 @@ hook.Add( "Think", "CallBinding", function()
 	if cache and FirstPressed then
 		<CODE>
 	end
-	FirstPressed = !cache
+	FirstPressed = not cache
 end )
 ```
